@@ -22,7 +22,7 @@ int main(void)
 	PNODE pHead = NULL; //等价于 struct Node * pHead = NULL;
 	int val; //存放删除了的元素
 
-	pHead = create_list(); //cretate_list()功能：创建一个非循环单链表，并将该链表表的头地址付给pHead
+	pHead = create_list(); //cretate_list()功能：创建一个非循环单链表，并将该链表表的头地址赋给pHead
     traverse_list(pHead);
 
 	if(delete_list(pHead,4,&val))
@@ -60,7 +60,7 @@ PNODE create_list(void)
 {
 	int len; //用来存放有效节点的个数
 	int i;
-	int val; //用来零时存放用户输入节点的值
+	int val; //用来临时存放用户输入节点的值
 	
 	//分配了一个不存放有效数据的头结点
 	PNODE pHead = (PNODE)malloc(sizeof(NODE));
@@ -149,7 +149,7 @@ void sort_list(PNODE pHead)
 	return;
 }
 
-//在pHead所指向链表啊的第pos个节点的前面插入一个新的结点，该节点的值是val，并且pos的值从1开始
+//在pHead所指向链表的第pos个节点的前面插入一个新的结点，该节点的值是val，并且pos的值从1开始
 bool insert_list(PNODE pHead, int pos, int val)
 {
 	int i =0;

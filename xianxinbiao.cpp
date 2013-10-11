@@ -182,9 +182,12 @@ void sort_arr(struct Arr * pArr)
 	{
 		for (j=i+1;j<pArr->cnt;++j)
 		{
-		t=pArr->pBase[i];
-		pArr->pBase[i] = pArr->pBase[j];
-		pArr->pBase[j] =t;
+			if(pArr->pBase[i] > pArr->pBase[j])
+			{
+			 t=pArr->pBase[i];
+			 pArr->pBase[i] = pArr->pBase[j];
+			 pArr->pBase[j] =t;
+			}
 		}
 	}
 }
